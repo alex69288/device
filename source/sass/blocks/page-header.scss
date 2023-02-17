@@ -1,0 +1,218 @@
+.page-header {
+}
+
+.page-header__nav {
+  padding: 43px 60px 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background-color: $main-color;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 60px;
+  top: -24px;
+}
+
+.page-header__form {
+  grid-column: 1 / 2;
+
+  label {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      background: url("../img/01-index/search.svg") no-repeat;
+      z-index: 1;
+    }
+  }
+}
+
+.search__input {
+  appearance: none;
+  padding: 10px 10px 10px 48px;
+  position: relative;
+  width: 350px;
+  font-family: $main-fonts;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 2px solid #000000;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: #000000;
+    -webkit-box-shadow: 0 0 0 40rem $main-color inset;
+  }
+}
+
+.search__button {
+  margin-left: -5px;
+  padding: 10px 56px;
+  font-family: $main-fonts;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+
+.page-header__user-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 60px;
+  list-style-type: none;
+}
+
+.page-header__user-item {
+  position: relative;
+
+  &:first-child {
+    margin-left: 53px;
+    margin-right: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -24px;
+  }
+
+  &--sign-in {
+    &::before {
+      top: 9px;
+      width: 13px;
+      height: 12px;
+      background: url("../img/01-index/sign-in.svg") no-repeat center;
+    }
+  }
+
+  &--compare {
+    &::before {
+      top: 14px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 12px;
+      background: url("../img/01-index/compare.svg") no-repeat center;
+    }
+  }
+
+  &--shipping {
+    &::before {
+      top: 4px;
+      width: 13px;
+      height: 21px;
+      background: url("../img/01-index/shipping.svg") no-repeat center;
+    }
+  }
+}
+
+.page-header__button {
+  font-family: $main-fonts;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.page-header__catalog-link {
+  margin-top: 45px;
+  position: relative;
+  grid-column: 1 / 2;
+  width: 293px;
+  font-family: $secondary-fonts;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 243px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  span {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 266px;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 16px;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 259px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 2px;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-header__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: end;
+  gap: 45px;
+  list-style-type: none;
+}
+
+.page-header__item {
+  margin-top: 45px;
+  font-family: $secondary-fonts;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
