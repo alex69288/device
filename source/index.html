@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Девайс</title>
-    <link rel="preload" href="fonts/rubik/rubik-400.woff2" as="font" crossorigin />
-    <link rel="preload" href="fonts/rubik/rubik-700.woff2" as="font" crossorigin />
+    <link rel="preload" href="fonts/rubik-400.woff2" as="font" crossorigin />
+    <link rel="preload" href="fonts/rubik-700.woff2" as="font" crossorigin />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -16,19 +16,29 @@
           <a class="page-header__logo" href="#">
             <img src="img/01-index/logo.svg" width="145" height="36" alt="Логотип сайта Девайс" />
           </a>
-          <form class="page-header__form" action="https://echo.htmlacademy.ru">
+          <form class="page-header__form search" action="https://echo.htmlacademy.ru">
             <label>
-              <input type="text" name="search" placeholder="Текст поиска" />
+              <input class="search__input" type="text" name="search" placeholder="Текст поиска" />
               <span class="visually-hidden">Поиск товара</span>
-              <button type="submit">Найти</button>
+              <button class="search__button" type="submit">Найти</button>
               <span class="visually-hidden">Кнопка найти</span>
             </label>
           </form>
-          <button class="page-header__button button--sign-in">Войти</button>
-          <a class="page-header__button button--compare" href="#">Сравнить</a>
-          <button class="page-header__button popup popup--active">Корзина</button>
+          <ul class="page-header__user-list">
+            <li class="page-header__user-item page-header__user-item--sign-in">
+              <button class="page-header__button">Войти</button>
+            </li>
+            <li class="page-header__user-item page-header__user-item--compare">
+              <a class="page-header__button" href="#">Сравнить</a>
+            </li>
+            <li class="page-header__user-item page-header__user-item--shipping">
+              <button class="page-header__button popup popup--active">Корзина</button>
+            </li>
+          </ul>
 
-          <a class="page-header__catalog-link" href="catalog.html">Каталог товаров</a>
+          <a class="page-header__catalog-link" href="catalog.html">
+            <span>Каталог товаров</span>
+          </a>
           <ul class="page-header__list">
             <li class="page-header__item">Доставка</li>
             <li class="page-header__item">Гарантия</li>
