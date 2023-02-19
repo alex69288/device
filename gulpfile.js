@@ -92,7 +92,7 @@ exports.sprite = sprite;
 // Copy
 const copy = (done) => {
   gulp
-    .src(["source/", "source/fonts/*.{woff2,woff}", "source/*.ico", "source/img/**/*.svg", "!source/img/icons/*.svg"], {
+    .src(["source/img/**/*.*", "source/fonts/*.{woff2,woff}", "source/*.ico", "source/img/**/*.svg", "!source/img/icons/*.svg"], {
       base: "source",
     })
     .pipe(gulp.dest("build"));
@@ -131,7 +131,7 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source/**/*.*", gulp.series(copy));
+  gulp.watch("source", gulp.series(copy, copyImages));
   gulp.watch("source/img/icon/*.svg", gulp.series(sprite));
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(script));

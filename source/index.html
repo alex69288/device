@@ -18,36 +18,112 @@
           </a>
           <form class="page-header__form search" action="https://echo.htmlacademy.ru">
             <label>
-              <input class="search__input" type="text" name="search" placeholder="Текст поиска" />
+              <input class="search__input" type="text" name="search" placeholder="Поиск по сайту" />
               <span class="visually-hidden">Поиск товара</span>
               <button class="search__button" type="submit">Найти</button>
               <span class="visually-hidden">Кнопка найти</span>
             </label>
           </form>
           <ul class="page-header__user-list">
-            <li class="page-header__user-item page-header__user-item--sign-in">
-              <button class="page-header__button">Войти</button>
+            <li class="page-header__user-item">
+              <button class="page-header__button page-header__button--sign-in">Войти</button>
             </li>
-            <li class="page-header__user-item page-header__user-item--compare">
-              <a class="page-header__button" href="#">Сравнить</a>
+            <li class="page-header__user-item">
+              <a class="page-header__button page-header__button--compare" href="#">Сравнить</a>
             </li>
-            <li class="page-header__user-item page-header__user-item--shipping">
-              <button class="page-header__button popup popup--active">Корзина</button>
+            <li class="page-header__user-item">
+              <button class="page-header__button page-header__button--shipping">Корзина</button>
             </li>
           </ul>
+          <!-- Popover -->
+          <div class="page-header__popover popover">
+            <ul class="popover__list">
+              <li class="popover__item">
+                <a class="popover__item-link" href="#">
+                  <picture>
+                    <source srcset="img/01-index/popover/product-1@2x.webp 2x, img/01-index/popover/product-1.webp 1x" type="image/webp" />
+                    <img class="popover__img" src="img/01-index/popover/product-1.png" srcset="img/01-index/popover/product-1@2x.png 2x, img/01-index/popover/product-1.png 1x" />
+                  </picture>
+                  <h2 class="popover__title">Любительская селфи-палка</h2>
+                </a>
+                <button class="popover__cross">
+                  <span class="visually-hidden">Удалить товар</span>
+                </button>
+              </li>
+              <li class="popover__item">
+                <a class="popover__item-link" href="#">
+                  <picture>
+                    <source srcset="img/01-index/popover/product-2@2x.webp 2x, img/01-index/popover/product-2.webp 1x" type="image/webp" />
+                    <img class="popover__img" src="img/01-index/popover/product-2.png" srcset="img/01-index/popover/product-2@2x.png 2x, img/01-index/popover/product-2.png 1x" />
+                  </picture>
+                  <h2 class="popover__title">Профессиональная селфи-палка</h2>
+                </a>
+                <button class="popover__cross">
+                  <span class="visually-hidden">Удалить товар</span>
+                </button>
+              </li>
+            </ul>
+            <div class="popover__info">
+              <span class="popover__count">Товаров: 2</span>
+              <span class="popover__price">Сумма: 2000 ₽</span>
+            </div>
+            <a class="popover__link" href="#">Открыть корзину</a>
+          </div>
 
-          <a class="page-header__catalog-link" href="catalog.html">
+          <button class="page-header__catalog-link" href="#">
             <span>Каталог товаров</span>
-          </a>
+          </button>
+
           <ul class="page-header__list">
-            <li class="page-header__item">Доставка</li>
-            <li class="page-header__item">Гарантия</li>
-            <li class="page-header__item">Контакты</li>
+            <li class="page-header__item">
+              <a class="page-header__link page-header__link--active" href="#">Доставка</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="#">Гарантия</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <!-- Burger -->
+          <ul class="page-header__catalog-burger">
+            <li class="page-header__catalog-burger-item">
+              <ul class="page-header__category">
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link page-header__category-link--active" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link" href="#">Экшн-камеры </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="page-header__category">
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="page-header__category">
+                <li class="page-header__category-item">
+                  <a class="page-header__category-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page__main page-main"></main>
     <footer class="page__footer page-footer"></footer>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>
