@@ -131,7 +131,7 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source", gulp.series(copy, copyImages));
+  gulp.watch("source", gulp.series(copy, copyImages, createWebp));
   gulp.watch("source/img/icon/*.svg", gulp.series(sprite));
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(script));

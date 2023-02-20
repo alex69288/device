@@ -1,0 +1,139 @@
+.popover {
+  display: none;
+  position: absolute;
+  top: 85px;
+  right: -20px;
+  width: 320px;
+  color: #ffffff;
+  background-color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.popover__list {
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.popover__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 42px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -21px;
+      left: -20px;
+      width: calc(100% + 40px);
+      border: 1px solid #ffffff;
+      opacity: 0.3;
+    }
+  }
+}
+
+.popover__item-link {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:focus {
+    outline: $main-focus;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popover__img {
+  margin-right: 23px;
+}
+
+.popover__title {
+  margin: 0;
+  width: 170px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.popover__cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/01-index/cross.svg") no-repeat center;
+
+  &:focus {
+    outline: $main-focus;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popover__info {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+.popover__link {
+  margin: 20px;
+  padding: 14px 22px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+
+  &:focus {
+    outline: $main-focus;
+    outline-offset: 1px;
+  }
+
+  &:hover {
+    color: #000000;
+    background-color: $main-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
