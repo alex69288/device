@@ -7,6 +7,8 @@
     <title>Девайс</title>
     <link rel="preload" href="fonts/rubik-400.woff2" as="font" crossorigin />
     <link rel="preload" href="fonts/rubik-700.woff2" as="font" crossorigin />
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -121,9 +123,81 @@
         </nav>
       </div>
     </header>
-    <main class="page__main page-main"></main>
+    <main class="page__main page-main">
+      <section class="page-main__promo promo container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="promo__wrapper">
+                <picture>
+                  <source srcset="img/01-index/slider/slider-1@2x.webp 2x, img/01-index/slider/slider-1.webp 1x" type="image/webp" />
+                  <img class="promo__img" srcset="img/01-index/slider/slider-1@2x.png 2x, img/01-index/slider/slider-1.png 1x" src="img/01-index/slider/slider-1.png" alt="Квадрокоптер" />
+                </picture>
+                <div class="promo__wrapper-rigth">
+                  <p class="promo__title">Порхает как бабочка, жалит как пчела!</p>
+                  <p class="promo__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <a class="promo__link" href="#">Подробнее</a>
+                  <dl class="promo__characteristic-list">
+                    <dd class="promo__characteristic-descr">800 м</dd>
+                    <dt class="promo__characteristic-title">Дальность полета</dt>
+                    <dd class="promo__characteristic-descr">50 м</dd>
+                    <dt class="promo__characteristic-title">Радиус поражения</dt>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="promo__wrapper">
+                <picture>
+                  <source srcset="img/01-index/slider/slider-2@2x.webp 2x, img/01-index/slider/slider-2.webp 1x" type="image/webp" />
+                  <img class="promo__img" srcset="img/01-index/slider/slider-2@2x.png 2x, img/01-index/slider/slider-2.png 1x" src="img/01-index/slider/slider-2.png" alt="Фитнес браслет" />
+                </picture>
+                <div class="promo__wrapper-rigth">
+                  <p class="promo__title">
+                    Худеем <br />
+                    правильно!
+                  </p>
+                  <p class="promo__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                  <a class="promo__link" href="#">Подробнее</a>
+                  <dl class="promo__characteristic-list">
+                    <dd class="promo__characteristic-descr">48 часов</dd>
+                    <dt class="promo__characteristic-title">Без подзарядки</dt>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="promo__wrapper">
+                <picture>
+                  <source srcset="img/01-index/slider/slider-3@2x.webp 2x, img/01-index/slider/slider-3.webp 1x" type="image/webp" />
+                  <img class="promo__img" srcset="img/01-index/slider/slider-3@2x.png 2x, img/01-index/slider/slider-3.png 1x" src="img/01-index/slider/slider-3.png" alt="Квадрокоптер" />
+                </picture>
+                <div class="promo__wrapper-rigth">
+                  <p class="promo__title">Делай селфи, как Бен Стиллер!</p>
+                  <p class="promo__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+                  <a class="promo__link" href="#">Подробнее</a>
+                  <dl class="promo__characteristic-list">
+                    <dd class="promo__characteristic-descr">8,5 м</dd>
+                    <dt class="promo__characteristic-title">Длина палки</dt>
+                    <dd class="promo__characteristic-descr">5 кг</dd>
+                    <dt class="promo__characteristic-title">Вес палки</dt>
+                    <dd class="promo__characteristic-descr">Карбон</dd>
+                    <dt class="promo__characteristic-title">Материал</dt>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
     <footer class="page__footer page-footer"></footer>
 
+    <!-- Swiper Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

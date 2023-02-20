@@ -34,3 +34,28 @@ document.head.append(script);
 script.onerror = function () {
   catalogBurger.classList.add("no-js");
 };
+
+// Swiper
+const swiper = new Swiper(".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
+  autoplay: {
+    delay: 5000,
+    pauseOnMouseEnter: true,
+  },
+  effect: "flip",
+  flipEffect: {
+    slideShadows: false,
+  },
+});
+
+// Counter
+let sliderNum = document.querySelectorAll(".promo__title");
+
+console.log(sliderNum);

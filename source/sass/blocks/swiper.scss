@@ -1,0 +1,52 @@
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  right: 0;
+  left: auto;
+  bottom: 178px;
+  width: 96px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  margin-left: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  opacity: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #000000;
+}
+
+.swiper-button-next {
+  top: 235px;
+  right: 590px;
+}
+
+.swiper-button-prev {
+  top: 235px;
+  left: 30px;
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  width: 20px;
+  height: 60px;
+  font-family: none;
+  background: url("../img/01-index/slider/arrow.svg") no-repeat center;
+}
+
+.swiper-slide {
+  counter-increment: sliders;
+}
+
